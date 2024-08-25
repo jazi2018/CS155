@@ -1,7 +1,7 @@
-﻿/// Chapter No. 1		Exercise No. 1
-/// File Name: MyFirstProgram.java
-/// @author: Bill Gates
-/// Date:  August 24, 2015
+﻿/// Homework 1		Problem 1
+/// File Name: MyFirstProgram.cs
+/// @author: Jared Ziv (Code is copy pasted as part of the assignment)
+/// Date:  August 24, 2024
 ///
 /// Problem Statement: Ask the user to enter two numbers, calculate the sum of
 /// these two numbers, and display the sum to the screen
