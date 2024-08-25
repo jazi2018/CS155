@@ -20,7 +20,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Problem1
 {
     class MyFirstProgram
     {
