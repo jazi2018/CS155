@@ -1,0 +1,18 @@
+﻿<Window x:Class="Homework3_Part2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Homework3_Part2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="priceText" HorizontalAlignment="Left" Margin="248,68,0,0" Text="" VerticalAlignment="Top" Width="475" Height="34" FontSize="20" TextWrapping="Wrap"/>
+        <Label x:Name="priceLabel" Content="Input price in cents:" HorizontalAlignment="Left" Margin="49,62,0,0" VerticalAlignment="Top" Width="194" Height="42" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="20"/>
+        <Button Content="Calculate change" HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Top" Height="34" Width="488" FontSize="20" Click="Button_Click"/>
+        <Label x:Name ="quarterLabel" Content="" HorizontalAlignment="Center" Margin="0,259,0,0" VerticalAlignment="Top" Width="488" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Label x:Name ="dimeLabel" Content="" HorizontalAlignment="Center" Margin="0,301,0,0" VerticalAlignment="Top" Width="488" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Label x:Name ="nickelLabel" Content="" HorizontalAlignment="Center" Margin="0,343,0,0" VerticalAlignment="Top" Width="488" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Label x:Name ="genericLabel" Content="Your change is:" HorizontalAlignment="Center" Margin="0,209,0,0" VerticalAlignment="Top" Width="488" FontSize="20" HorizontalContentAlignment="Center"/>
+    </Grid>
+</Window>
