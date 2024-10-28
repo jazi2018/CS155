@@ -1,0 +1,7 @@
+Which strategy is better for Aaron: to intentionally miss on the first shot or to try and hit the best shooter?:
+	- The better strategy for Aaron is to intentionally miss on the first shot. This is reflected by his significantly improved win percentage after
+	  implementing the strategy.
+
+Who has the best chance or winning, the best shooter or the worst shooter?:
+	- The worst shooter has the best chance of winning, epsecially after implementing the intentional miss strategy. Before that, the most average shooter
+	  (Bob) had the best chance of winning.
