@@ -7,7 +7,9 @@
 
         static void Main(string[] args)
         {
-            LoadInitialCSV("cards.csv"); //prepare for LAG
+            //..'s to move out of bin
+            LoadInitialCSV("../../../cards_pipe_delimeted.csv"); //prepare for a little lag
+            LoadDeckCSV("../../../deck.csv");
             string choice;
             do
             {
@@ -35,7 +37,7 @@
                         break;
                 }
             } while (choice != "5");
-            SaveCSV("deck.csv");
+            SaveCSV("../../../deck.csv");
         }
 
         static void DisplayMenu()
@@ -59,7 +61,7 @@
             string type = Console.ReadLine();
 
             Card newCard = new Card(name, set, type);
-            collection.AddCard(newCard);
+            deck.AddCard(newCard);
         }
 
         static void RemoveCard()
@@ -72,7 +74,7 @@
             string type = Console.ReadLine();
 
             Card newCard = new Card(name, set, type);
-            collection.RemoveCard(newCard);
+            deck.RemoveCard(newCard);
         }
         static void SearchCards()
         {
@@ -90,7 +92,7 @@
                 string[] lines = File.ReadAllLines(filename);
                 foreach (string line in lines)
                 {
-                    string[] values = line.Split(',');
+                    string[] values = line.Split('|');
                     Card card = new Card(
                         values[50], //name
                         values[64], //set code
@@ -98,26 +100,29 @@
                         );
                     collection.AddCard(card);
                 }
+                Console.WriteLine($"Collection loaded from {filename}");
             }
             catch (IOException e)
             {
                 Console.WriteLine($"Error reading CSV file: {e.Message}");
             }
         }
-        void LoadCSV(string filename)
+        void LoadDeckCSV(string filename)
         {
             try
             {
                 string[] lines = File.ReadAllLines(filename);
+                bool first = true; //skip first line
                 foreach (string line in lines)
                 {
+                    if (first) { continue; }
                     string[] values = line.Split(',');
                     Card card = new Card(
                         values[0], //name
                         values[1], //set code
                         values[2] //will be creature, enchantment, instant, etc.
                         );
-                    collection.AddCard(card);
+                    deck.AddCard(card);
                 }
             }
             catch (IOException e)
@@ -135,7 +140,7 @@
                     writer.WriteLine("Name,Set,Type");
 
                     // Write each card to the CSV file
-                    foreach (var card in collection.GetCards())
+                    foreach (var card in deck.GetCards())
                     {
                         string line = $"{card.Name},{card.Set},{card.Type}";
                         writer.WriteLine(line);

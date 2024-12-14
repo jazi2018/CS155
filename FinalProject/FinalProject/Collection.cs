@@ -19,7 +19,7 @@ namespace FinalProject
         {
             foreach (Card c in cards)
             {
-                if (c == card)
+                if (c.Name == card.Name)
                 {
                     cards.Remove(c);
                 }
